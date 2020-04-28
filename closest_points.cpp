@@ -61,7 +61,7 @@ namespace solution
         const int
           mid = (left + right) >> 1,
           x_mid = points[mid].x;
-        static std::vector<point> buff(points.size());
+        std::vector<point> buff(points.size());
 
         solve(left, mid), solve(mid + 1, right);
         std::merge(points.begin() + left, points.begin() + mid + 1, points.begin() + mid + 1,
